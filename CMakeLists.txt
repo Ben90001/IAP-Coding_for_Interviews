@@ -33,7 +33,3 @@ target_link_libraries(
 
 include(GoogleTest)
 gtest_discover_tests(test_mySolutions)
-
-
-# https://www.youtube.com/watch?v=Lp1ifh9TuFI
-# add_test(NAME COMMAND) "to tell cmake that this program is actually a unit test"
