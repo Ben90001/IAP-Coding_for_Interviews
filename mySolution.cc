@@ -33,15 +33,15 @@ namespace mySolution{
     }
 
     std::string longestPalindromicSubstring_DP_recursion \
-        (std::string s, int lowerBound, int upperBound, std::unordered_map<std::string, std::string> *memo){
+        (std::string *s, int lowerBound, int upperBound, std::unordered_map<std::string, std::string> *memo){
             int len = upperBound-lowerBound+1;
 
             //substring not yet computed
-            if(memo->find(s.substr(lowerBound,len)) == memo->end()){
+            if(memo->find(s->substr(lowerBound,len)) == memo->end()){
                 //check if palindrom
                 bool isPalindrom = true;
                 for(int i=0; i< len/2; i++){
-                    if(s[lowerBound+i]==s[lowerBound+len-1-i]) continue;
+                    if((*s)[lowerBound+i]==(*s)[lowerBound+len-1-i]) continue;
                     else{
                         isPalindrom = false;
                         break;
@@ -50,23 +50,23 @@ namespace mySolution{
                 //full substring is palindrom
                 using pair = std::pair<std::string,std::string>;
                 if(isPalindrom){
-                    return memo->insert(pair(s.substr(lowerBound,len), s.substr(lowerBound,len))).first->first;
+                    return memo->insert(pair(s->substr(lowerBound,len), s->substr(lowerBound,len))).first->first;
                 }
 
                 //compute longest palindrom in all subsubstrings
                 if(lowerBound<upperBound){
-                    memo->insert(pair(s.substr(lowerBound,len-1), longestPalindromicSubstring_DP_recursion(s, lowerBound, upperBound-1, memo)));
-                    memo->insert(pair(s.substr(lowerBound+1,len-1), longestPalindromicSubstring_DP_recursion(s, lowerBound+1, upperBound, memo)));
+                    memo->insert(pair(s->substr(lowerBound,len-1), longestPalindromicSubstring_DP_recursion(s, lowerBound, upperBound-1, memo)));
+                    memo->insert(pair(s->substr(lowerBound+1,len-1), longestPalindromicSubstring_DP_recursion(s, lowerBound+1, upperBound, memo)));
 
-                    if(memo->at(s.substr(lowerBound,len-1)).size() >= memo->at(s.substr(lowerBound+1,len-1)).size())
-                        return memo->at(s.substr(lowerBound,len-1));
+                    if(memo->at(s->substr(lowerBound,len-1)).size() >= memo->at(s->substr(lowerBound+1,len-1)).size())
+                        return memo->at(s->substr(lowerBound,len-1));
                     else
-                        return memo->at(s.substr(lowerBound+1,len-1));
+                        return memo->at(s->substr(lowerBound+1,len-1));
                 }
             }
 
             //substring already computed
-            return memo->at(s.substr(lowerBound,len));
+            return memo->at(s->substr(lowerBound,len));
     }
 
     std::string longestPalindromicSubstring_DP(std::string s){
@@ -77,7 +77,7 @@ namespace mySolution{
         if(n==1) return s;
 
         std::unordered_map<std::string, std::string> memo;
-        return longestPalindromicSubstring_DP_recursion(s,0,n-1, &memo);
+        return longestPalindromicSubstring_DP_recursion(&s,0,n-1, &memo);
     }
 
     std::string longestPalindromicSubstring_naive(std::string s){
