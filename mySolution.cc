@@ -70,14 +70,8 @@ namespace mySolution{
     }
 
     std::string longestPalindromicSubstring_DP(std::string s){
-        int n = s.size();   //this works, because 1 char = 1 byte
-
-        //basecase
-        if(n==0) return "";
-        if(n==1) return s;
-
         std::unordered_map<std::string, std::string> memo;
-        return longestPalindromicSubstring_DP_recursion(&s,0,n-1, &memo);
+        return longestPalindromicSubstring_DP_recursion(&s,0,s.size()-1, &memo);
     }
 
     std::string longestPalindromicSubstring_naive(std::string s){
