@@ -11,17 +11,18 @@ make
 ./test_solutions
 ```
 
-I recommend running these commands first thing to confirm the correct installation. The last command runs the tests. Out of the box all tests should pass.
+I recommend running these commands first thing to confirm the correct installation.  
+The last command runs the tests. Out of the box all tests should pass.  
 
 ## Usage
-After installation you can add your own implementations in the `yourSolutions`.
-From the `build` directory you can then run all tests. By using:
+After installation you can add your own implementations in the `yourSolutions.cc` file.  
+From the `build` directory you can then run all tests them using:
 ````
 make
 ./test_solutions
 ````
 This runs all tests. 
 
-##Compare Runtime
-For tests of naive implementations long inputs are excluded from the test by default. If you want to compare also the runtime of the naive implementions set `COMPARABLE_TESTING = true` in `the test_Solutions` file.
-NOTE: The testing will take very long after enabeling this.
+### Compare Runtime
+For tests of naive implementations long inputs are excluded from the test by default. If you want to compare also the runtime of the naive implementions set `COMPARABLE_TESTING = true` in the `test_Solutions.cc` file.  
+NOTE: Testing will take very long after enabeling this.
