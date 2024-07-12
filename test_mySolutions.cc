@@ -97,7 +97,7 @@ TEST (mySolutions, climbStairs_naive) {
 }
 
 
-TEST (mySolution, uniquePaths_iter){
+TEST (mySolutions, uniquePaths_iter){
 
     //test bad input
     EXPECT_THROW(mySolution::uniquePaths_iter(0,1), std::out_of_range);
@@ -117,7 +117,7 @@ TEST (mySolution, uniquePaths_iter){
     EXPECT_EQ(mySolution::uniquePaths_iter(30,30),30067266499541040);
     
 }
-TEST (mySolution, uniquePaths_DP){
+TEST (mySolutions, uniquePaths_DP){
 
     //test bad input
     EXPECT_THROW(mySolution::uniquePaths_DP(0,1), std::out_of_range);
@@ -137,7 +137,7 @@ TEST (mySolution, uniquePaths_DP){
     EXPECT_EQ(mySolution::uniquePaths_DP(30,30),30067266499541040);
     
 }
-TEST (mySolution, uniquePaths_naive){
+TEST (mySolutions, uniquePaths_naive){
     
     //test bad input
     EXPECT_THROW(mySolution::uniquePaths_naive(0,1), std::out_of_range);
@@ -161,7 +161,7 @@ TEST (mySolution, uniquePaths_naive){
 }
 
 
-TEST (mySolution, longestPalindromicSubstring_iter){
+TEST (mySolutions, longestPalindromicSubstring_iter){
 
     //test edgecases
     EXPECT_EQ(mySolution::longestPalindromicSubstring_iter(""),"");
@@ -182,7 +182,7 @@ TEST (mySolution, longestPalindromicSubstring_iter){
     EXPECT_EQ(mySolution::longestPalindromicSubstring_iter("meineomafährtimhühnerstallmotorrad"),"oto");
     EXPECT_EQ(mySolution::longestPalindromicSubstring_iter("thisisareallyreallyreallylongishsentencebecauseweshouldalsotestwithverrylongstrings"),"cebec");
 }
-TEST (mySolution, longestPalindromicSubstring_DP){
+TEST (mySolutions, longestPalindromicSubstring_DP){
 
     //test edgecases
     EXPECT_EQ(mySolution::longestPalindromicSubstring_DP(""),"");
@@ -203,7 +203,7 @@ TEST (mySolution, longestPalindromicSubstring_DP){
     EXPECT_EQ(mySolution::longestPalindromicSubstring_DP("meineomafährtimhühnerstallmotorrad"),"oto");
     EXPECT_EQ(mySolution::longestPalindromicSubstring_DP("thisisareallyreallyreallylongishsentencebecauseweshouldalsotestwithverrylongstrings"),"cebec");
 }
-TEST (mySolution, longestPalindromicSubstring_naive){
+TEST (mySolutions, longestPalindromicSubstring_naive){
 
     //test edgecases
     EXPECT_EQ(mySolution::longestPalindromicSubstring_naive(""),"");
