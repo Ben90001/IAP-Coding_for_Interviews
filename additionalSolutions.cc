@@ -5,7 +5,7 @@
     implementations.
     NOTE: This will greatly increase runtime of the affected tests.
 ----------------------------------------------------------------------------------*/
-#define COMPARABLE_TESTING 0
+    #define COMPARABLE_TESTING 0
 
 /*--------------------------------------------------------------------------------
     Implement your own solutions in this file by defining the functions below.
