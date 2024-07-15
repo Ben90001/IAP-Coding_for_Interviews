@@ -16,20 +16,15 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-	test_mySolutions
+	tests
 	test_mySolutions.cc
+	test_additionalSolutions.cc
 )
 
-#-> seems to be handled by google test, not two tests pasing anymore, only one (TEST "class/function" thingy)
-#add_test(
-#	NAME test_mySolutions
-#	COMMAND test_mySolutions
-#)
-
 target_link_libraries(
-	test_mySolutions
+	tests
 	GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(test_mySolutions)
+gtest_discover_tests(tests)

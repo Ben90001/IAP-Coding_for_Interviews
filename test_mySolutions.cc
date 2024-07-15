@@ -1,9 +1,6 @@
 #include <gtest/gtest.h>
 #include "mySolution.cc"
 
-//set true for full execution of test on naive implementations
-#define COMPARABLE_TESTING false
-
 
 TEST (mySolutions, fibonacci_iter) {
     //testing bad n values
