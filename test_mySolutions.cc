@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "mySolution.cc"
+#include "test_additionalSolutions.cc"
 
 
 TEST (mySolutions, fibonacci_iter) {
