@@ -10,7 +10,7 @@ cmake ..
 make
 ./test_solutions
 ```
-The framework requires `gtest`, [googles testing library](https://github.com/google/googletest) for C++ to work. CMake will automatically install the library if it is not found on your system.  
+The framework requires `gtest`, [googles testing library for C++](https://github.com/google/googletest) to work. CMake will automatically install the library if it is not found on your system.  
 
 I recommend running the commands above first thing to confirm the correct installation.  
 The last command runs the tests. Out of the box all tests should pass.  
