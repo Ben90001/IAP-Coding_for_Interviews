@@ -46,4 +46,4 @@ This framework comes with 4 Coding problems:
     Constraints: `0 <= n <= 1000` for n being the size of s. If there exists multiple palindromic substrings with maximum size any is correct.
 
 ### My Implementations
-My implementations can be found in `mySolutions.cc`. 
+My own implementations can be found in `mySolutions.cc`. 
