@@ -9,8 +9,10 @@ namespace mySolution{
 
     std::string longestPalindromicSubstring_iter(std::string s){
         const int n= s.size();
-        for(int len = n; 0<len; len--){             //iter over lengths (long->short)
-            for(int offset=0; offset<n; offset++){  //iter over substrings of same len
+        //iter over lengths (long->short)
+        for(int len = n; 0<len; len--){         
+            //iter over substrings of same length    
+            for(int offset=0; offset<n; offset++){  
                 if(offset+len-1 < n){
                     //check if palindrom
                     bool isPalindrom = true;
