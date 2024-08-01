@@ -196,9 +196,10 @@ namespace mySolution{
 
         //initialize memo, negative values are always invalide
         long *memo = new long[n+1];
-        for (int i = 0; i<=n; i++) memo[i] = -1;
         memo[1] = 1;
         memo[2] = 2;
+        for (int i = 3; i<=n; i++) memo[i] = -1;
+        
 
         return climbStairs_DP_recursion(n, memo);
     }
