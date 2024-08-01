@@ -1,3 +1,6 @@
+
+#include<gtest/gtest.h>
+
 #include<string>
 
 /*--------------------------------------------------------------------------------
@@ -34,7 +37,9 @@
 namespace additionalSolutions{
 
 
-    std::string longestPalindromicSubstring_iter(std::string s);
+    std::string longestPalindromicSubstring_iter_(std::string s){
+        return "";
+    }
     std::string longestPalindromicSubstring_DP(std::string s);
     std::string longestPalindromicSubstring_naive(std::string s);
 
