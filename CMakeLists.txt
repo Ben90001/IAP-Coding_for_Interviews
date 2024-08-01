@@ -17,7 +17,7 @@ enable_testing()
 
 add_executable(
 	tests
-	test_mySolutions.cc
+	test_providedSolutions.cc
 	test_additionalSolutions.cc
 )
 

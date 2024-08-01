@@ -31,7 +31,7 @@
     #define TEST_FIB_DP 0
     #define TEST_FIB_NAIVE 0
 
-namespace additionalSolution{
+namespace additionalSolutions{
 
 
     std::string longestPalindromicSubstring_iter(std::string s);

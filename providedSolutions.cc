@@ -5,7 +5,7 @@
 #include<unordered_map>
 
 
-namespace mySolution{
+namespace mySolutions{
 
     std::string longestPalindromicSubstring_iter(std::string s){
         const int n= s.size();
