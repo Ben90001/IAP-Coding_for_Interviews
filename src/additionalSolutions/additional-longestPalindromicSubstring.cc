@@ -14,4 +14,4 @@ namespace additionalSolutions{
     std::string longestPalindromicSubstring_DP(std::string s);
     std::string longestPalindromicSubstring_naive(std::string s);
 
-}
+}//namespace additionalSolutions
