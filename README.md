@@ -2,33 +2,29 @@
 Coding challenges for my beginners practical including a framework to test ones own implementations.
 
 ## Installation
-To install this framework follow the standard procedure:
-```
-mkdir build
-cd build
-cmake ..
-make
-./test_solutions
-```
-The framework requires `gtest`, [googles testing library for C++](https://github.com/google/googletest) to work. CMake will automatically install the library if it is not found on your system.  
+To install this framework you can simply run the `build.sh` skript.  
+The `build.sh` also runs the tests. Out of the box all tests should pass.  
 
-I recommend running the commands above first thing to confirm the correct installation.  
-The last command runs the tests. Out of the box all tests should pass.  
+After the first build, you can use the `rebuild.sh`script which deletes the previous build before calling `build.sh`.
+
+### Third party Libraries
+The framework uses `gtest`, [googles testing library for C++](https://github.com/google/googletest).  
+No installation is needed, download and installation is handled by CMake.
 
 ## Usage
-The only file you need to modify to implement and test your own solutions is `additionalSolutions.cc`.  
+There are only 2 files you need to modify to test your own implementations. You can find both of them in the `src`directory.
 To add your own implementation follow these steps:  
-1. Implement your functionality using the already present declaration.  
-2. Enable the corresponding testing variable at the top of the file.
+1. Implement your functionality using the provided declaration in `src/additionalSolutions.cc`.  
+2. Enable the corresponding testing variable in `src/config.hh`.
 3. If you wish to run the exact same tests on the different versions of the problems enable `COMPARABLE_TESTING`.  
 4. From the build directory recompile the tests using:
     ````
     make
-    ./test_solutions
+    ./tests
     ````
     This runs all tests.
 
-NOTE: Enabeling `COMPARABLE_TESTING` will lead to very long runtimes of test of naive implementations.
+NOTE: Enabeling `COMPARABLE_TESTING` will lead to very long runtimes for test of naive implementations.
 
 ## Coding Problems
 This framework comes with 4 Coding problems:
@@ -46,4 +42,4 @@ This framework comes with 4 Coding problems:
     Constraints: `0 <= n <= 1000` for n being the size of s. If there exists multiple palindromic substrings with maximum size any is correct.
 
 ### My Implementations
-My own implementations can be found in `mySolutions.cc`. 
+My own implementations can be found in the `providedSolutions.cc` file.  
