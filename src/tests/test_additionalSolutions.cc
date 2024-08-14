@@ -1,5 +1,9 @@
 #include <gtest/gtest.h>
-#include "../additionalSolutions.cc"
+
+#include "../additionalSolutions/additional-fibonacci.cc"
+#include "../additionalSolutions/additional-climbingStairs.cc"
+#include "../additionalSolutions/additional-uniquePaths.cc"
+#include "../additionalSolutions/additional-longestPalindromicSubstring.cc"
 #include"../config.hh"
 
 #if TEST_FIB_ITER

@@ -12,9 +12,8 @@ The framework uses `gtest`, [googles testing library for C++](https://github.com
 No installation is needed, download and installation is handled by CMake.
 
 ## Usage
-There are only 2 files you need to modify to test your own implementations. You can find both of them in the `src`directory.
 To add your own implementation follow these steps:  
-1. Implement your functionality using the provided declaration in `src/additionalSolutions.cc`.  
+1. Implement your functionality using the provided declaration in `src/additionalSolutions/additional-NameOfProblem.cc`.  
 2. Enable the corresponding testing variable in `src/config.hh`.
 3. If you wish to run the exact same tests on the different versions of the problems enable `COMPARABLE_TESTING`.  
 4. From the build directory recompile the tests using:
@@ -41,5 +40,6 @@ This framework comes with 4 Coding problems:
     Where the goal is to return the longest palindromic substring of a given input string.  
     Constraints: `0 <= n <= 1000` for n being the size of s. If there exists multiple palindromic substrings with maximum size any is correct.
 
+
 ### My Implementations
-My own implementations can be found in the `providedSolutions.cc` file.  
+My own implementations can be found in the `providedSolutions` directory.  
