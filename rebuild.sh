@@ -1,9 +1,9 @@
 #!/bin/bash
 
+#bash setup
+set -x
+set -e
+
 rm -rf ./build
-mkdir ./build
-cd ./build
-cmake ..
-make #VERBOSE=1
-echo "Running the program: "
-./tests
+./build.sh
+

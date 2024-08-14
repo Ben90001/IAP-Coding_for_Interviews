@@ -17,8 +17,8 @@ enable_testing()
 
 add_executable(
 	tests
-	test_providedSolutions.cc
-	test_additionalSolutions.cc
+	./src/tests/test_providedSolutions.cc
+	./src/tests/test_additionalSolutions.cc
 )
 
 target_link_libraries(

@@ -1,12 +1,12 @@
 
 #include <gtest/gtest.h>
 
-#include "src/providedSolutions/provided-fibonacci.cc"
-#include "src/providedSolutions/provided-climbingStairs.cc"
-#include "src/providedSolutions/provided-uniquePaths.cc"
-#include "src/providedSolutions/provided-longestPalindromicSubstring.cc"
+#include "../providedSolutions/provided-fibonacci.cc"
+#include "../providedSolutions/provided-climbingStairs.cc"
+#include "../providedSolutions/provided-uniquePaths.cc"
+#include "../providedSolutions/provided-longestPalindromicSubstring.cc"
 
-#include "test_additionalSolutions.cc"
+#include"../config.hh"
 
 
 TEST (providedSolutions, fibonacci_iter) {

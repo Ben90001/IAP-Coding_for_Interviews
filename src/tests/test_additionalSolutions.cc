@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
-#include "additionalSolutions.cc"
+#include "../additionalSolutions.cc"
+#include"../config.hh"
 
 #if TEST_FIB_ITER
 TEST (additionalSolutions, fibonacci_iter) {
