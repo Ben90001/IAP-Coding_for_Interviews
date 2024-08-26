@@ -22,17 +22,11 @@ namespace providedSolutions{
     }
 
     long fibonacci_DP_recursion(int n, long* memo){
-        if(n==0){
-            return 0;
-        }
-        if(n==1){
-            return 1;
-        }
-        if(memo[n]== -1){
-            memo[n-1] = fibonacci_DP_recursion(n-1, memo);
-            memo[n-2] = fibonacci_DP_recursion(n-2, memo);
-            return memo[n]= memo[n-1] + memo[n-2];
-        }
+        // recursion: uncomputed case
+        if(memo[n]== -1)
+            return memo[n]= fibonacci_DP_recursion(n-1, memo) \
+                                + fibonacci_DP_recursion(n-2, memo);
+        // use of memoization: precomputed case
         else return memo[n];
     }
     long fibonacci_DP(int n){
@@ -40,9 +34,10 @@ namespace providedSolutions{
         if(!(0<=n && n<=88)) throw std::out_of_range("n is out of bounds!");
 
         if (n==0) return 0;
+        if (n==1) return 1;
 
         long* memo = new long[n+1];
-        for (int i=0; i<=n; i++){ memo[i]= -1; }
+        for (int i=0; i<=n; i++) memo[i]= -1;
         memo[0]=0;
         memo[1]=1;
 
@@ -50,8 +45,11 @@ namespace providedSolutions{
     }
 
     long fibonacci_naive(int n){
+        // base case
         if(n==0) return 0;
         if(n==1) return 1;
+
+        // recursion
         return fibonacci_naive(n-1) + fibonacci_naive(n-2);
     }
 }//namespace providedSolutions
