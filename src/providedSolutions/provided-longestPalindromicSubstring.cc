@@ -80,7 +80,7 @@ namespace providedSolutions{
         //check if palindrom  
         bool isPalindrom = true;
         //check from middle to edges
-        for(int i=floor(n/2); i<n; i++){
+        for(int i=n/2; i<n; i++){
             if(s[i]==s[n-i-1]) continue;
             else{
                 isPalindrom = false;

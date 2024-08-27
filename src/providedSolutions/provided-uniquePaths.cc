@@ -59,7 +59,7 @@ namespace providedSolutions{
 
         // calculate result
         long result = uniquePaths_DP_recursion(m,n,memo);
-        
+
         // clean up allocated memory
         delete[] storage_ptr;
         delete[] memo;
